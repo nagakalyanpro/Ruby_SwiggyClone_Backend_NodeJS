@@ -34,6 +34,11 @@ app.use('/products', productRoutes);
 app.use('/user', userRoutes);
 app.use('/cart', cartRoutes);
 
+app.use('/', (req, res) => {
+    res.send('<h1> Welcome to Ruby </h1>');
+    console.log('Welcome to Ruby')
+})
+
 
 app.listen(PORT, () => {
     console.log(`server started & running at ${PORT}`);
